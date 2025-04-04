@@ -1,0 +1,32 @@
+@use './colors'  as *;
+@use './fonts'  as *;
+
+
+:root{
+
+     //Colors Declearations
+     @each $color, $shades in $colors {
+          @each $shade, $value in $shades {
+               --vtc-#{$color}-#{$shade}: #{$value};
+          }
+     }
+
+     @each $font-w, $shades in $font-ws {
+          @each $shade, $value in $shades {
+               --f-#{$font-w}-#{$shade}: #{$value};
+          }
+     }
+
+     @each $font-ff, $shades in $font-ffs {
+          @each $shade, $value in $shades {
+               --f-#{$font-ff}-#{$shade}: #{$value};
+          }
+     }
+
+     @each $font-fs, $shades in $font-fss {
+          @each $shade, $value in $shades {
+               --f-#{$font-fs}-#{$shade}: #{$value};
+          }
+      }
+}
+

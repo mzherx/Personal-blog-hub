@@ -1,0 +1,511 @@
+
+@use '../utils' as *;
+
+   /*
+ ::::::::::::::::::::::::::
+  PRELOADER AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+ @keyframes fade-out {
+   from {
+     opacity: 1;
+   }
+ 
+   to {
+     opacity: 0;
+   }
+ }
+ .animated {
+   animation-duration: 1s;
+   animation-fill-mode: both;
+ }
+ .fade-out {
+   animation-name: fade-out;
+ }
+ 
+ /* Flex helpers */
+ .flex {
+   display: flex;
+   
+   &.vac {
+     align-items: center;
+   }
+   
+   &.cac {
+     justify-content: center;
+   }
+   
+   &.flex-wrap-wrap {
+     flex-wrap: wrap;
+   }
+   .row, .full-width {
+     width: 100%;
+   }
+   &.justify-content-end {
+     justify-content: flex-end;
+   }
+     &.flex-column {
+         flex-direction: column;
+     }
+     &.justify-space-around {
+     justify-content: space-around;
+         
+     }
+     &.justify-space-between {
+     justify-content: space-between;
+         
+     }
+ }
+ 
+ @keyframes fade-in {
+   from {
+     opacity: 0;
+   }
+ 
+   to {
+     opacity: 1;
+   }
+ }
+ 
+ .fade-in {
+   animation-name: fade-in;
+ }
+ .overlay-preloader {
+   position: fixed;
+   top: 0px; 
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   z-index: 100000000;
+     background: var(--vtc-bg-white);
+     transition: all .8s;
+   
+   .preloader  {
+     svg {
+       animation-name: preloader-in;
+         animation-duration: 0.8s;
+       animation-fill-mode: forwards;
+       animation-timing-function: ease-in-out;
+     }
+
+     &.out svg {
+       animation-name: preloader-out;
+       
+     }
+     
+     &.animate .outer {
+         animation-name: show100;
+       animation-duration:2.3s;
+       animation-delay: 1s;
+       animation-timing-function: linear;
+         opacity: 1;
+     }
+     
+     .logo {
+       opacity: 0;
+       animation-delay: 0.5s;
+       display: block;
+       width: 40%;
+       margin: 0px auto;
+       text-align: center;
+       background: transparent url(../img/logo/preloader-logo1.svg) no-repeat center center;
+       background-size: contain;
+       text-indent: -99999px;
+       height: 100px;
+       padding: 5px;
+       
+       &.fade-out {
+         animation-delay: 0.2s;
+         animation-duration:0.2s;
+       }	
+     }
+   }
+
+   .loader {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    }
+    .loader svg {
+        position: absolute;
+      top: 0%;
+    }
+
+    .outer {
+      fill: transparent;
+      stroke: var(--vtc-bg-main1);
+      stroke-width: 2;
+      stroke-dasharray: 99;
+    /* transition: stroke-dashoffset 1s;*/
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+    .preloader .outer {
+        stroke-dasharray: 502;
+        
+    }
+    .outer.loading{
+      transition: stroke-dashoffset 0.8s ease; //The preloader overlay speed, was 1s
+    }
+    .background {
+        opacity: 0.1;
+        stroke: var(--vtc-bg-main1);
+        stroke-width: 2;
+        fill: transparent;
+        
+    }
+  .animate .outer {
+    animation-name: show100;
+    animation-duration:5s;
+      opacity: 1;
+    animation-timing-function: linear;
+  }
+  .loader.animate {
+      transform: rotate(-90deg);
+  } 
+ }
+
+
+ .overlay-preloader2 {
+  position: fixed;
+  top: 0px; 
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100000000;
+    background: var(--vtc-bg-white);
+    transition: all .8s;
+  
+  .preloader  {
+    svg {
+      animation-name: preloader-in;
+        animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+
+    &.out svg {
+      animation-name: preloader-out;
+      
+    }
+    
+    &.animate .outer {
+        animation-name: show100;
+      animation-duration:2.3s;
+      animation-delay: 1s;
+      animation-timing-function: linear;
+        opacity: 1;
+    }
+    
+    .logo {
+      opacity: 0;
+      animation-delay: 0.5s;
+      display: block;
+      width: 40%;
+      margin: 0px auto;
+      text-align: center;
+      background: transparent url(../img/logo/preloader-logo2.svg) no-repeat center center;
+      background-size: contain;
+      text-indent: -99999px;
+      height: 100px;
+      padding: 5px;
+      
+      &.fade-out {
+        animation-delay: 0.2s;
+        animation-duration:0.2s;
+      }	
+    }
+  }
+
+  .loader {
+   position: relative;
+   height: 200px;
+   width: 200px;
+   }
+   .loader svg {
+       position: absolute;
+     top: 0%;
+   }
+
+   .outer {
+     fill: transparent;
+     stroke: var(--vtc-bg-main3);
+     stroke-width: 2;
+     stroke-dasharray: 99;
+   /* transition: stroke-dashoffset 1s;*/
+     stroke-dashoffset: 0;
+     opacity: 0;
+   }
+   .preloader .outer {
+       stroke-dasharray: 502;
+       
+   }
+   .outer.loading{
+     transition: stroke-dashoffset 0.8s ease; //The preloader overlay speed, was 1s
+   }
+   .background {
+       opacity: 0.1;
+       stroke: var(--vtc-bg-main3);
+       stroke-width: 2;
+       fill: transparent;
+       
+   }
+ .animate .outer {
+   animation-name: show100;
+   animation-duration:5s;
+     opacity: 1;
+   animation-timing-function: linear;
+ }
+ .loader.animate {
+     transform: rotate(-90deg);
+ } 
+}
+
+
+.overlay-preloader3 {
+  position: fixed;
+  top: 0px; 
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100000000;
+    background: var(--vtc-bg-white);
+    transition: all .8s;
+  
+  .preloader  {
+    svg {
+      animation-name: preloader-in;
+        animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+
+    &.out svg {
+      animation-name: preloader-out;
+      
+    }
+    
+    &.animate .outer {
+        animation-name: show100;
+      animation-duration:2.3s;
+      animation-delay: 1s;
+      animation-timing-function: linear;
+        opacity: 1;
+    }
+    
+    .logo {
+      opacity: 0;
+      animation-delay: 0.5s;
+      display: block;
+      width: 40%;
+      margin: 0px auto;
+      text-align: center;
+      background: transparent url(../img/logo/preloader-logo3.svg) no-repeat center center;
+      background-size: contain;
+      text-indent: -99999px;
+      height: 100px;
+      padding: 5px;
+      
+      &.fade-out {
+        animation-delay: 0.2s;
+        animation-duration:0.2s;
+      }	
+    }
+  }
+
+  .loader {
+   position: relative;
+   height: 200px;
+   width: 200px;
+   }
+   .loader svg {
+       position: absolute;
+     top: 0%;
+   }
+
+   .outer {
+     fill: transparent;
+     stroke: var(--vtc-bg-main4);
+     stroke-width: 2;
+     stroke-dasharray: 99;
+   /* transition: stroke-dashoffset 1s;*/
+     stroke-dashoffset: 0;
+     opacity: 0;
+   }
+   .preloader .outer {
+       stroke-dasharray: 502;
+       
+   }
+   .outer.loading{
+     transition: stroke-dashoffset 0.8s ease; //The preloader overlay speed, was 1s
+   }
+   .background {
+       opacity: 0.1;
+       stroke: var(--vtc-bg-main4);
+       stroke-width: 2;
+       fill: transparent;
+       
+   }
+ .animate .outer {
+   animation-name: show100;
+   animation-duration:5s;
+     opacity: 1;
+   animation-timing-function: linear;
+ }
+ .loader.animate {
+     transform: rotate(-90deg);
+ } 
+}
+
+
+.overlay-preloader4 {
+  position: fixed;
+  top: 0px; 
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100000000;
+    background: var(--vtc-bg-white);
+    transition: all .8s;
+  
+  .preloader  {
+    svg {
+      animation-name: preloader-in;
+        animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+
+    &.out svg {
+      animation-name: preloader-out;
+      
+    }
+    
+    &.animate .outer {
+        animation-name: show100;
+      animation-duration:2.3s;
+      animation-delay: 1s;
+      animation-timing-function: linear;
+        opacity: 1;
+    }
+    
+    .logo {
+      opacity: 0;
+      animation-delay: 0.5s;
+      display: block;
+      width: 40%;
+      margin: 0px auto;
+      text-align: center;
+      background: transparent url(../img/logo/preloader-logo4.svg) no-repeat center center;
+      background-size: contain;
+      text-indent: -99999px;
+      height: 100px;
+      padding: 5px;
+      
+      &.fade-out {
+        animation-delay: 0.2s;
+        animation-duration:0.2s;
+      }	
+    }
+  }
+
+  .loader {
+   position: relative;
+   height: 200px;
+   width: 200px;
+   }
+   .loader svg {
+       position: absolute;
+     top: 0%;
+   }
+
+   .outer {
+     fill: transparent;
+     stroke: var(--vtc-bg-main6);
+     stroke-width: 2;
+     stroke-dasharray: 99;
+   /* transition: stroke-dashoffset 1s;*/
+     stroke-dashoffset: 0;
+     opacity: 0;
+   }
+   .preloader .outer {
+       stroke-dasharray: 502;
+       
+   }
+   .outer.loading{
+     transition: stroke-dashoffset 0.8s ease; //The preloader overlay speed, was 1s
+   }
+   .background {
+       opacity: 0.1;
+       stroke: var(--vtc-bg-main6);
+       stroke-width: 2;
+       fill: transparent;
+       
+   }
+ .animate .outer {
+   animation-name: show100;
+   animation-duration:5s;
+     opacity: 1;
+   animation-timing-function: linear;
+ }
+ .loader.animate {
+     transform: rotate(-90deg);
+ } 
+}
+
+ @keyframes preloader-in {
+   
+     0% {
+       opacity: 0;
+       transform: scale(0.5)
+     }
+   
+     25% {
+       opacity: 1;
+       transform: scale(1.4);
+     
+     }
+   
+   60% {
+         opacity: 1;
+         transform: scale(1);
+     
+      }
+ 
+ }
+ 
+ @keyframes preloader-out {
+   
+     0% {
+      
+       opacity: 1;
+       transform: scale(1);
+     }
+   
+     25% {
+       opacity: 1;
+       transform: scale(1.4);
+     
+     }
+   
+   60% {
+         opacity: 0;
+         transform: scale(0.5);
+     
+    }
+    
+    100% {
+          opacity: 0;
+          transform: scale(0.5);
+     
+     } 
+ 
+ }
+
+
+ /*
+ ::::::::::::::::::::::::::
+  PRELOADER AREA CSS
+ ::::::::::::::::::::::::::
+ */

@@ -1,0 +1,66 @@
+
+
+
+/*
+ ::::::::::::::::::::::::::
+  fonts area css
+ ::::::::::::::::::::::::::
+ */
+
+
+ $font-ws: (
+    'fw':(
+        'regular': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'ex-bold': 800,
+    )
+);
+
+$font-ffs: (
+    'ff': (
+        'font-1': "'Figtree', sans-serif",
+    )
+);
+
+$font-fss: (
+    'fs': (
+        'font-fs16': 16px,
+        'font-fs18': 18px,
+        'font-fs20': 20px,
+        'font-fs22': 22px,
+        'font-fs24': 24px,
+        'font-fs26': 26px,
+        'font-fs28': 28px,
+        'font-fs30': 30px,
+        'font-fs32': 32px,
+        'font-fs34': 34px,
+        'font-fs36': 36px,
+        'font-fs40': 40px,
+        'font-fs42': 42px,
+        'font-fs44': 44px,
+        'font-fs48': 48px,
+        'font-fs50': 50px,
+        'font-fs52': 52px,
+        'font-fs54': 54px,
+        'font-fs56': 56px,
+        'font-fs58': 58px,
+        'font-fs60': 60px,
+        'font-fs62': 62px,
+        'font-fs64': 64px,
+        'font-fs66': 66px,
+        'font-fs68': 68px,
+        'font-fs70': 70px,
+        'font-fs72': 72px,
+        'font-fs74': 74px,
+        'font-fs76': 76px,
+        'font-fs78': 78px,
+        'font-fs80': 80px,
+        'font-fs82': 82px,
+        'font-fs84': 84px,
+        'font-fs86': 86px,
+        'font-fs88': 88px,
+        'font-fs100': 100px,
+    )
+)

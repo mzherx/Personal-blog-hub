@@ -1,0 +1,29 @@
+$colors: (
+    'text': (
+        'black1': #0A0D12,
+        'black2': #010206,
+        'black3': #070A1D,
+        'gray1': #6B7280,
+        'gray2': #4F525E,
+        'gray3': #525258,
+        'white': #fff,
+    ),
+    'bg': (
+        'main1': #4B1AB3,
+        'main2': linear-gradient(90deg, #6740D0 0%, #726EFC 100%),
+        'main3': #726EFC,
+        'main4': #FF138C,
+        'main5': var(--Home-Page-1-LLL, linear-gradient(135deg, #FF5000 0%, #FF00B8 100%)),
+        'main6': #2051FF,
+        'common-1': #F3F4F6,
+        'common-2': #E9E7F2,
+        'common-3': #F6F4FC,
+        'common-4': #ECEBF5,
+        'common-5': #E9EEFF,
+        'white': #ffffff,
+    ),
+    'border': (
+        '1': #D3D5D9,
+        '2': #D8DADE,
+    )
+);

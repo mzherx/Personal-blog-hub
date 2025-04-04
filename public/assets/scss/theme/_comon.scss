@@ -1,0 +1,656 @@
+@use '../utils/' as *;
+
+  /*
+ ::::::::::::::::::::::::::
+  COMMON AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+ .bg1 {
+  background-color: var(--vtc-bg-common-1);
+ }
+
+//  heading area ===
+
+.heading1-w {
+  h2 {
+    color: var(--vtc-text-white);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs52); /* 118.182% */
+    text-transform: capitalize;
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs30);
+      line-height: var(--f-fs-font-fs38);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs30);
+      line-height: var(--f-fs-font-fs38);
+    }
+  }
+  
+  p {
+    color: var(--vtc-text-white);
+    font-size: var(--f-fs-font-fs16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--f-fs-font-fs26); /* 162.5% */
+  }
+}
+
+.heading1 {
+  p {
+    color: var(--vtc-text-gray1);
+    font-size: var(--f-fs-font-fs16);
+    font-style: normal;
+    font-weight: var(--f-fw-regular);
+    line-height: var(--f-fs-font-fs26); /* 162.5% */
+  }
+  h2 {
+    color: var(--vtc-text-black1);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs52); /* 118.182% */
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs30);
+      line-height: var(--f-fs-font-fs38);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs30);
+      line-height: var(--f-fs-font-fs38);
+    }
+  }
+  h3 {
+    color: var(--vtc-text-black3);
+    font-size: var(--f-fs-font-fs32);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs32); /* 100% */
+    text-transform: capitalize;
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs24);
+      line-height: var(--f-fs-font-fs24);
+    }
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs24);
+      line-height: var(--f-fs-font-fs24);
+    }
+
+    a {
+      color: var(--vtc-text-black3);
+      font-size: var(--f-fs-font-fs32);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs32); /* 100% */
+      text-transform: capitalize;
+      transition: all .4s;
+
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main1);
+      }
+    }
+  }
+  h4 {
+    a {
+      display: inline-block;
+      color: var(--vtc-text-black1);
+      font-size: var(--f-fs-font-fs20);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs28); /* 140% */
+      transition: all .4s;
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main1);
+      }
+    }
+  }
+}
+
+h5 {
+  color: var(--vtc-text-black1);
+  font-size: var(--f-fs-font-fs24);
+  font-style: normal;
+  font-weight: var(--f-fw-bold);
+  line-height: var(--f-fs-font-fs24); /* 100% */
+}
+
+.heading2-w {
+  h2 {
+    color: var(--vtc-text-white);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs52); /* 118.182% */
+    text-transform: capitalize;
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+  }
+
+  p {
+    color: var(--vtc-text-white);
+    font-size: var(--f-fs-font-fs20);
+    font-style: normal;
+    font-weight: var(--f-fw-medium);
+    line-height: var(--f-fs-font-fs28); /* 162.5% */
+  }
+}
+
+.heading3 {
+  h2 {
+    color: var(--vtc-text-black2);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs44); /* 100% */
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+  }
+
+  h4 {
+    a {
+      display: inline-block;
+      color: var(--vtc-text-black1);
+      font-size: var(--f-fs-font-fs20);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs28); /* 140% */
+      transition: all .4s;
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main4);
+      }
+    }
+  }
+
+  h3 {
+    a {
+      display: inline-block;
+      color: var(--vtc-text-black1);
+      font-size: var(--f-fs-font-fs32);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs32); /* 140% */
+      transition: all .4s;
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main4);
+      }
+    }
+  }
+
+  p {
+    color: var(--vtc-text-gray1);
+    font-size: var(--f-fs-font-fs16);
+    font-style: normal;
+    font-weight: var(--f-fw-regular);
+    line-height: var(--f-fs-font-fs26); /* 162.5% */
+  }
+
+}
+
+.heading2 {
+  .sub-titile {
+    display: inline-block;
+    background: linear-gradient(90deg, #6740D0 0%, #726EFC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+
+    img {
+      transform: translateY(-2px);
+    }
+  }
+  h2 {
+    color: var(--vtc-text-black2);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs44); /* 100% */
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+  }
+  h4 {
+    a {
+      display: inline-block;
+      color: #010206;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px; /* 125% */
+      transition: all .4s;
+
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main3);
+      }
+    }
+  }
+
+  p {
+    color: var(--vtc-text-gray2);
+    font-size: var(--f-fs-font-fs16);
+    font-style: normal;
+    font-weight: var(--f-fw-regular);
+    line-height: var(--f-fs-font-fs26); /* 162.5% */
+  }
+
+}
+
+.heading4 {
+  span.span {
+    display: inline-block;
+    color: #2051FF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    img {
+      transform: translateY(-2px);
+    }
+  }
+  h2 {
+    color: var(--vtc-text-black3);
+    font-size: var(--f-fs-font-fs44);
+    font-style: normal;
+    font-weight: var(--f-fw-semibold);
+    line-height: var(--f-fs-font-fs44); /* 100% */
+
+    @media #{$md} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+
+    @media #{$xs} {
+      font-size: var(--f-fs-font-fs32);
+      line-height: var(--f-fs-font-fs40);
+    }
+  }
+  h3 {
+    a {
+      display: inline-block;
+      color: var(--vtc-text-black3);
+      font-size: var(--f-fs-font-fs32);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs42); /* 131.25% */
+      transition: all .4s;
+
+      @media #{$md} {
+        font-size: var(--f-fs-font-fs28);
+        line-height: var(--f-fs-font-fs36);
+      }
+      @media #{$xs} {
+        font-size: var(--f-fs-font-fs28);
+        line-height: var(--f-fs-font-fs36);
+      }
+
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main6);
+      }
+    }
+  }
+
+  p {
+    color: var(--vtc-text-gray3);
+    font-size: var(--f-fs-font-fs20);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+  }
+
+  h4 {
+    a {
+      display: inline-block;
+      color: var(--vtc-text-black3);
+      font-size: var(--f-fs-font-fs24);
+      font-style: normal;
+      font-weight: var(--f-fw-semibold);
+      line-height: var(--f-fs-font-fs30); /* 125% */
+      text-transform: capitalize;
+      transition: all .4s;
+
+      &:hover {
+        transition: all .4s;
+        color: var(--vtc-bg-main6);
+      }
+    }
+  }
+}
+
+//  heading area ===
+
+@media screen and (min-width: 768px) {
+  .reveal {
+    position: relative;
+    display: inline-flex;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  .reveal img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transform-origin: left;
+  }
+}
+
+/*============================
+++++PAGE-PROGRESS-SATRT+++++
+=============================*/
+
+.blok:nth-of-type(odd) {
+  background-color: white;
+}
+
+.blok:nth-of-type(even) {
+  background-color: black;
+}
+
+@-webkit-keyframes border-transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+/* #Progress
+================================================== */
+
+.progress-wrap {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 999;
+}
+.progress-wrap::after {
+  position: absolute;
+  font-family: "FontAwesome";
+  content: "\f062";
+  text-align: center;
+  line-height: 56px;
+  font-size: 18px;
+  color: #03256c;
+  left: 0;
+  top: 0;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap:hover::after {
+  opacity: 0;
+}
+.progress-wrap::before {
+  position: absolute;
+  font-family: "FontAwesome";
+  content: "\f062";
+  text-align: center;
+  line-height: 56px;
+  font-size: 18px;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap:hover::before {
+  opacity: 1;
+}
+.progress-wrap svg path {
+  fill: none;
+}
+.progress-wrap svg.progress-circle path {
+  stroke: #03256c; /* --- Lijn progres kleur --- */
+  stroke-width: 4;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+/*============================
+++++PAGE-PROGRESS-END+++++
+=============================*/
+.progress-wrap.progress-wrap2 {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.267);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap.progress-wrap2.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 99;
+  color: rgb(255, 255, 255);
+}
+.progress-wrap.progress-wrap2::after {
+  position: absolute;
+  font-family: "FontAwesome";
+  content: "\f062";
+  text-align: center;
+  line-height: 56px;
+  font-size: 18px;
+  color: #f7f7f7;
+  left: 0;
+  top: 0;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap.progress-wrap2:hover::after {
+  opacity: 0;
+}
+.progress-wrap.progress-wrap2::before {
+  position: absolute;
+  font-family: "FontAwesome";
+  content: "\f062";
+  text-align: center;
+  line-height: 56px;
+  font-size: 18px;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.progress-wrap.progress-wrap2:hover::before {
+  opacity: 1;
+}
+.progress-wrap.progress-wrap2 svg path {
+  fill: none;
+}
+.progress-wrap.progress-wrap2 svg.progress-circle path {
+  stroke: #ffffff; /* --- Lijn progres kleur --- */
+  stroke-width: 4;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+
+  /*Pagination*/
+  .theme-pagination ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+      display: inline-block;
+      color: var(--vtc-text-black1);
+
+      a {
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        background-color: var(--vtc-bg-common-2);
+        margin: 0 4px;
+        transition: all 0.3s;
+        display: block;
+        color: var(--ztc-text-text-1);
+        font-weight: 700;
+        position: relative;
+        border-radius: 2px;
+
+        &:hover {
+          background: var(--vtc-bg-main1);
+          transition: all 0.3s;
+          color: var(--vtc-text-white);
+        }
+        &.active {
+          background: var(--vtc-bg-main1);
+          transition: all 0.3s;
+          color: var(--vtc-text-white);
+        }
+      }
+    }
+  }
+
+  .theme-pagination.theme-pagination2 ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+      display: inline-block;
+      color: var(--vtc-text-black1);
+
+      a {
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        background-color: var(--vtc-bg-common-5);
+        margin: 0 4px;
+        transition: all 0.3s;
+        display: block;
+        color: var(--ztc-text-text-1);
+        font-weight: 700;
+        position: relative;
+        border-radius: 8px;
+
+        &:hover {
+          background: var(--vtc-bg-main6);
+          transition: all 0.3s;
+          color: var(--vtc-text-white);
+        }
+        &.active {
+          background: var(--vtc-bg-main6);
+          transition: all 0.3s;
+          color: var(--vtc-text-white);
+        }
+      }
+    }
+  }
+  
+
+   /*
+ ::::::::::::::::::::::::::
+  COMMON AREA CSS
+ ::::::::::::::::::::::::::
+ */

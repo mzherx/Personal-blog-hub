@@ -1,0 +1,550 @@
+@use "../utils" as *;
+
+/*
+ ::::::::::::::::::::::::::
+  HERO AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+// --- hero 1 style ---
+
+.hero1 {
+	.hero1-bg {
+		padding: 40px;
+		border-radius: 8px;
+		margin-top: 100px;
+		margin-bottom: 100px;
+
+		@media #{$md} {
+			margin-bottom: 50px;
+		}
+		@media #{$xs} {
+			margin-bottom: 50px;
+		}
+
+		.main-heading1 {
+			padding-left: 50px;
+
+			@media #{$md} {
+				padding-left: 0;
+				padding: 50px 0px 0px 0px;
+			}
+			@media #{$xs} {
+				padding-left: 0;
+				padding: 50px 0px 0px 0px;
+			}
+			h1 {
+				color: var(--vtc-text-black1);
+				font-size: var(--f-fs-font-fs60);
+				font-style: normal;
+				font-weight: var(--f-fw-bold);
+				line-height: var(--f-fs-font-fs66); /* 108.333% */
+
+				@media #{$md} {
+					font-size: var(--f-fs-font-fs40);
+					line-height: var(--f-fs-font-fs48);
+				}
+
+				@media #{$xs} {
+					font-size: var(--f-fs-font-fs40);
+					line-height: var(--f-fs-font-fs48);
+				}
+			}
+			p {
+				color: var(--vtc-text-gray1);
+				font-size: var(--f-fs-font-fs16);
+				font-style: normal;
+				font-weight: var(--f-fw-regular);
+				line-height: var(--f-fs-font-fs26); /* 162.5% */
+			}
+
+			.bottom-content {
+				color: var(--vtc-text-black1);
+				font-size: var(--f-fs-font-fs16);
+				font-style: normal;
+				font-weight: var(--f-fw-regular);
+				line-height: var(--f-fs-font-fs16); /* 100% */
+				margin-top: 22px;
+			}
+
+			.form-area {
+				position: relative;
+				margin-top: 30px;
+				margin-right: 130px;
+
+				@media #{$md} {
+					margin-right: 0px;
+				}
+
+				@media #{$xs} {
+					margin-right: 0px;
+				}
+
+				input {
+					border: none;
+					border-radius: 999px;
+					padding: 20px;
+					width: 100%;
+
+					&::placeholder {
+						color: var(--Home-Page-1-Paragraph, var(--gray-500, #6b7280));
+						font-size: var(--f-fs-font-fs16);
+						font-style: normal;
+						font-weight: var(--f-fw-regular);
+						line-height: var(--f-fs-font-fs16); /* 100% */
+					}
+
+					&:focus {
+						outline: none;
+					}
+				}
+
+				.button {
+					position: absolute;
+					bottom: 6px;
+					right: 7px;
+				}
+			}
+		}
+	}
+}
+
+// --- hero 1 style ---
+
+// --- hero 2 style ---
+
+.hero2 {
+	min-height: 650px;
+	margin: 24px 40px 0px 40px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+
+	@media #{$md} {
+		margin: 0;
+	}
+
+	@media #{$xs} {
+		margin: 0;
+	}
+
+	.main-heading2 {
+		padding-top: 20px;
+
+		@media #{$md} {
+			padding-top: 150px;
+		}
+
+		@media #{$xs} {
+			padding-top: 150px;
+		}
+		h1 {
+			color: var(--white, #fff);
+			font-size: 56px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 56px; /* 100% */
+		}
+		p {
+			color: rgba(255, 255, 255, 0.9);
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 28px; /* 140% */
+		}
+	}
+
+	.form-area {
+		position: relative;
+		margin-top: 30px;
+		margin-right: 130px;
+
+		@media #{$md} {
+			margin-right: 0px;
+		}
+
+		@media #{$xs} {
+			margin-right: 0px;
+		}
+
+		input {
+			border: none;
+			border-radius: 8px;
+			padding: 20px;
+			width: 100%;
+
+			&::placeholder {
+				color: var(--vtc-text-gray2);
+				font-size: var(--f-fs-font-fs18);
+				font-style: normal;
+				font-weight: var(--f-fw-regular);
+				line-height: var(--f-fs-font-fs18); /* 100% */
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.button {
+			position: absolute;
+			bottom: 4px;
+			right: 4px;
+		}
+	}
+
+	.images-all {
+		height: 350px;
+		position: relative;
+		text-align: end;
+
+		@media #{$md} {
+			text-align: start;
+			height: 450px;
+		}
+
+		@media #{$xs} {
+			text-align: start;
+			height: 450px;
+		}
+
+		.image1 {
+			position: relative;
+			z-index: 3;
+			top: 30px;
+			border-radius: 16px;
+			overflow: hidden;
+			display: inline-block;
+		}
+
+		.shape {
+			position: absolute;
+			right: -90px;
+			top: -30px;
+			z-index: 0;
+
+			@media #{$md} {
+				right: 0;
+				top: 0;
+			}
+
+			@media #{$xs} {
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}
+
+// --- hero 2 style ---
+
+// --- hero 3 style ---
+
+.hero3 {
+	min-height: 800px;
+	.main-heading3 {
+		padding-top: 150px;
+		h1 {
+			color: var(--vtc-text-black1);
+			font-size: var(--f-fs-font-fs80);
+			font-style: normal;
+			font-weight: var(--f-fw-bold);
+			line-height: var(--f-fs-font-fs100); /* 125% */
+
+			@media #{$md} {
+				font-size: var(--f-fs-font-fs40);
+				line-height: var(--f-fs-font-fs48);
+			}
+
+			@media #{$xs} {
+				font-size: var(--f-fs-font-fs40);
+				line-height: var(--f-fs-font-fs48);
+			}
+		}
+
+		p {
+			color: var(--vtc-text-gray1);
+			font-size: var(--f-fs-font-fs16);
+			font-style: normal;
+			font-weight: var(--f-fw-regular);
+			line-height: var(--f-fs-font-fs26); /* 162.5% */
+		}
+
+		.buttons {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 30px;
+
+			@media #{$xs} {
+				display: block;
+			}
+
+			p {
+				color: var(--Home-Page-1-Text-Color, #0a0d12);
+				font-size: var(--f-fs-font-fs20);
+				font-style: normal;
+				font-weight: var(--f-fw-medium);
+				line-height: var(--f-fs-font-fs18); /* 90% */
+				margin: 0px 16px;
+
+				@media #{$xs} {
+					margin: 12px 0px;
+				}
+			}
+		}
+	}
+}
+
+// --- hero 3 style ---
+
+// --- hero 4 style ---
+
+.hero4 {
+	min-height: 880px;
+
+	@media #{$md} {
+		min-height: 840px;
+	}
+
+	@media #{$xs} {
+		min-height: 1000px;
+	}
+
+	.image-shapes-frist {
+		@media #{$md} {
+			position: relative;
+			top: 260px;
+		}
+
+		@media #{$xs} {
+			position: relative;
+			top: 360px;
+		}
+	}
+
+	.image-shape {
+		position: absolute;
+		a.text {
+			background-color: var(--vtc-bg-white);
+			display: inline-block;
+			color: #070a1d;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 16px; /* 100% */
+			text-transform: uppercase;
+			padding: 6px 10px;
+			border-radius: 8px;
+			position: absolute;
+			bottom: 10px;
+		}
+	}
+
+	.image-shape1 {
+		left: -40px;
+		.text {
+			left: 25%;
+		}
+
+		@media #{$md} {
+			left: 0;
+		}
+
+		@media #{$xs} {
+			left: 0;
+		}
+	}
+	.image-shape2 {
+		top: 190px;
+		left: 40px;
+
+		a.text {
+			left: 16%;
+		}
+
+		@media #{$xs} {
+			left: 0;
+		}
+	}
+
+	.image-shape3 {
+		right: -40px;
+		.text {
+			left: 20%;
+		}
+
+		@media #{$md} {
+			right: 0;
+		}
+
+		@media #{$xs} {
+			right: 0;
+		}
+	}
+	.image-shape4 {
+		top: 190px;
+		right: 20px;
+
+		a.text {
+			left: 13%;
+		}
+
+		@media #{$xs} {
+			right: 0;
+		}
+	}
+
+	.main-heading4 {
+		padding-top: 220px;
+
+		@media #{$md} {
+			padding-top: 0;
+		}
+
+		@media #{$xs} {
+			padding-top: 0;
+		}
+
+		.sub-title {
+			color: var(--vtc-text-white);
+			font-size: var(--f-fs-font-fs24);
+			font-style: normal;
+			font-weight: var(--f-fw-semibold);
+			line-height: var(--f-fs-font-fs24); /* 100% */
+			text-transform: uppercase;
+			margin-bottom: 16px;
+
+			img {
+				width: 24px;
+				margin-right: 4px;
+				transform: translateY(-3px);
+			}
+		}
+		h1 {
+			color: var(--vtc-text-white);
+			font-size: var(--f-fs-font-fs64);
+			font-style: normal;
+			font-weight: var(--f-fw-semibold);
+			line-height: var(--f-fs-font-fs80); /* 125% */
+
+			@media #{$md} {
+				font-size: var(--f-fs-font-fs40);
+				line-height: var(--f-fs-font-fs48);
+			}
+			@media #{$xs} {
+				font-size: var(--f-fs-font-fs40);
+				line-height: var(--f-fs-font-fs48);
+			}
+		}
+
+		.form-area {
+			margin: 30px 90px 0px 90px;
+			position: relative;
+
+			@media #{$xs} {
+				margin: 30px 0px 0px 0px;
+			}
+
+			input {
+				padding: 18px;
+				border: none;
+				border-radius: 111px;
+				width: 100%;
+				color: var(--vtc-text-gray3);
+				font-size: var(--f-fs-font-fs20);
+				font-style: normal;
+				font-weight: var(--f-fw-medium);
+				line-height: var(--f-fs-font-fs20); /* 100% */
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					color: var(--vtc-text-gray3);
+					font-size: var(--f-fs-font-fs20);
+					font-style: normal;
+					font-weight: var(--f-fw-medium);
+					line-height: var(--f-fs-font-fs20); /* 100% */
+				}
+			}
+
+			.search {
+				height: 48px;
+				width: 48px;
+				border-radius: 50%;
+				font-size: var(--f-fs-font-fs20);
+				color: var(--vtc-text-white);
+				background-color: var(--vtc-bg-main6);
+				border: none;
+				position: absolute;
+				top: 6px;
+				right: 7px;
+			}
+		}
+	}
+}
+
+// --- hero 4 style ---
+
+// --- Inner hero style ---
+
+.inner-hero {
+	min-height: 350px;
+	display: flex;
+	align-items: center;
+	.main-heading {
+		padding-top: 60px;
+		text-align: center;
+		
+		.page-prog {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			a,
+			p,
+			span {
+				display: inline-block;
+				color: var(--vtc-text-black3);
+				font-size: var(--f-fs-font-fs16);
+				font-style: normal;
+				font-weight: var(--f-fw-regular);
+				line-height: var(--f-fs-font-fs16); /* 100% */
+			}
+
+			span {
+				margin: 0px 8px;
+				display: inline-block;
+			}
+
+			p.bold {
+				font-weight: var(--f-fw-bold);
+			}
+		}
+		h1 {
+			color: var(--vtc-text-black3);
+			font-size: var(--f-fs-font-fs60);
+			font-style: normal;
+			font-weight: var(--f-fw-bold);
+			line-height: var(--f-fs-font-fs60); /* 100% */
+			padding-top: 16px;
+
+			@media #{$xs} {
+				font-size: var(--f-fs-font-fs40);
+				line-height: var(--f-fs-font-fs48);
+			}
+		}
+	}
+}
+.bg-grey {
+	background: #f3f4f6;
+}
+
+// --- Inner hero style ---
+
+/*
+ ::::::::::::::::::::::::::
+  HERO AREA CSS
+ ::::::::::::::::::::::::::
+ */
