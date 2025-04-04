@@ -29,7 +29,6 @@ export default function Error404() {
 										</div>
 										<h3 className="mt-5 mb-2">Error 404</h3>
 										<p className="mb-5">This page is outside of the universe</p>
-										<button onClick={() => window.location.href = "/"} className="theme-btn1">Back to Home</button>
 									</div>
 								</div>
 							</div>
