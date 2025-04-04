@@ -7,7 +7,7 @@ Welcome to Personal Blog Hub – a dynamic and engaging personal blogging platfo
 
 ## 🖼️ Screenshots:
 
-
+[![Blue-Red-Minimalist-Corporate-Business-Social-Media-Management-Plan-Presentation.gif](https://i.postimg.cc/SN6ZzvmF/Blue-Red-Minimalist-Corporate-Business-Social-Media-Management-Plan-Presentation.gif)](https://postimg.cc/QHMg2SB0)
 
 ## 🛠 Tech Stack
 
