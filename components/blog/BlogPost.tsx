@@ -1,14 +1,11 @@
 'use client'
 import allData from "@/util/blog.json"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import BlogCard1 from "./BlogCard1"
 import BlogCard2 from "./BlogCard2"
 import BlogCard3 from "./BlogCard3"
 import BlogCard4 from "./BlogCard4"
 import Pagination from "./Pagination"
-// import BlogCard5 from "./BlogCard5";
-// import BlogCard6 from "./BlogCard6";
-// import BlogCard7 from "./BlogCard7";
 
 // Define the type for the individual blog item
 interface BlogItem {
@@ -19,7 +16,6 @@ interface BlogItem {
 	author: string
 	date: string
 }
-
 
 // Define the props for the BlogPost component
 interface BlogPostProps {
@@ -40,38 +36,36 @@ export default function BlogPost({
 	showPagination,
 	desc,
 	col,
-	showItem,
+	showItem = 4, // Default to 4 if not provided
 	video,
 	formatIcon,
 	latest,
 	showStart = 0,
 	showEnd = 5
 }: BlogPostProps) {
-	const data: BlogItem[] = allData.slice(showStart, showEnd)  // Ensure the data is typed as BlogItem[]
-
 	const [currentPage, setCurrentPage] = useState(1)
 	const [pagination, setPagination] = useState<number[]>([])
-	const [limit, setLimit] = useState(showItem || 4) // Default to 4 if not provided
+	const [limit, setLimit] = useState(showItem)
 
-	// Calculate total number of pages
+	// Ensure data slicing is safe
+	const data: BlogItem[] = allData.slice(showStart, showEnd) || []
 	const pages = Math.ceil(data.length / limit)
+
+	// Memoized function to prevent unnecessary re-creation
+	const createPagination = useCallback(() => {
+		const arr = Array.from({ length: pages }, (_, idx) => idx + 1)
+		setPagination(arr)
+	}, [pages])
 
 	useEffect(() => {
 		createPagination()
-	}, [limit, data.length])
+	}, [limit, data.length, createPagination])
 
-	const createPagination = () => {
-		let arr = new Array(pages)
-			.fill(null)
-			.map((_, idx) => idx + 1)
-		setPagination(arr)
-	}
-
-	const startIndex = currentPage * limit - limit
+	const startIndex = (currentPage - 1) * limit
 	const endIndex = startIndex + limit
 	const getPaginatedProducts = data.slice(startIndex, endIndex)
 
-	const paginationItem = 4 // Limit pagination items per page
+	const paginationItem = 4 // Number of pagination buttons shown
 	let start = Math.floor((currentPage - 1) / paginationItem) * paginationItem
 	let end = start + paginationItem
 	const getPaginationGroup = pagination.slice(start, end)
@@ -90,19 +84,21 @@ export default function BlogPost({
 
 	return (
 		<>
-			{getPaginatedProducts.length === 0 && <h3>No Products Found</h3>}
+			{data.length === 0 ? (
+				<h3>No Products Found</h3>
+			) : (
+				getPaginatedProducts.map((item, i) => (
+					<React.Fragment key={item.id}>
+						{!style && <BlogCard1 item={item} desc={desc} col={col} />}
+						{style === 1 && <BlogCard1 item={item} desc={desc} col={col} />}
+						{style === 2 && <BlogCard2 item={item} desc={desc} col={col} />}
+						{style === 3 && <BlogCard3 item={item} desc={desc} col={col} />}
+						{style === 4 && <BlogCard4 item={item} desc={desc} col={col} />}
+					</React.Fragment>
+				))
+			)}
 
-			{getPaginatedProducts.map((item, i) => (
-				<React.Fragment key={i}>
-					{/* Rendering the title, content, and excerpt by accessing the `rendered` property */}
-					{!style && <BlogCard1 item={item} desc={desc} col={col} />}
-					{style === 1 && <BlogCard1 item={item} desc={desc} col={col} />}
-					{style === 2 && <BlogCard2 item={item} desc={desc} col={col} />}
-					{style === 3 && <BlogCard3 item={item} desc={desc} col={col} />}
-					{style === 4 && <BlogCard4 item={item} desc={desc} col={col} />}
-				</React.Fragment>
-			))}
-			{showPagination && (
+			{showPagination && pages > 1 && (
 				<>
 					<div className="space60" />
 					<Pagination
