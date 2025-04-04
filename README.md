@@ -4,7 +4,9 @@ Welcome to Personal Blog Hub – a dynamic and engaging personal blogging platfo
 
 🔗 Live Demo: alex-blog-hub.vercel.app
 
-🖼️ Screenshots:
+
+## 🖼️ Screenshots:
+
 
 
 ## 🛠 Tech Stack
@@ -20,9 +22,11 @@ This project is built with cutting-edge technologies:
 - 🔷 TypeScript – Ensuring a scalable and error-free codebase
 
 
+
 ## 🎯 Project Status
 🚧 This project is still in development! 🚧
 The frontend is fully built and ready to go. However, the backend setup is up to you – feel free to integrate your preferred backend solution!
+
 
 ## 🚀 Getting Started
 Want to run it locally? Follow these steps:
@@ -38,6 +42,7 @@ Want to run it locally? Follow these steps:
 3️⃣ Start the development server:
 
 `npm run dev`
+
 
 ## 💡 Contribution & Usage
 🔓 Open Source: This project is free to use, but please give credit if you use it! 🙌
