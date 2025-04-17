@@ -50,5 +50,3 @@ Want to run it locally? Follow these steps:
 🛠 Want to contribute? Feel free to submit a pull request and improve the project!
 
 💬 Feedback? Drop an issue, and let’s make this better together! 🚀
-
-
